@@ -43,9 +43,9 @@ export const ShortenUrlForm = ({ btnText }) => {
 					className="z-100"
 				/>*/}
 				<div className="grid grid-cols-12 grid-rows-12 gap-7 w-full align-center">
-					<input type="url" id="longurl" name="longurl" className=" row-span-1 col-span-8 bg-white px-4 py-2 border-t border-b border-l text-gray-700 focus:outline-none w-auto rounded" placeholder="https://longurl.sucks" onChange={handleLongUrl} pattern={urlPattern} required />
-					<input type="submit" className="row-span-1 col-span-4 min-w-max rounded-full bg-yellow-400  text-gray-800 font-bold p-2 uppercase border-yellow-400 border-t border-b border-r focus:outline-none focus:ring focus-ring-2 focus:ring-yellow-400" value={btnText}/>
-					<input type="text" id="shorturl" name="shorturl" className="row-span-1 col-span-8 bg-white px-4 py-2 border-t border-b border-l text-gray-700 focus:outline-none w-auto rounded" placeholder="Snip it to this!" onChange={handleShortUrl} required />
+					<input type="url" id="longurl" name="longurl" className=" row-span-1 col-span-8 bg-white px-4 py-2 border-t border-b border-l text-gray-700 focus:outline-none w-auto rounded" placeholder="https://{long url}" onChange={handleLongUrl} pattern={urlPattern} required />
+					<input type="submit" className="row-span-1 col-span-4 min-w-max rounded-full bg-gray-500  text-gray-800 font-bold p-2 uppercase border-gray-800 border-t border-b border-r focus:outline-none focus:ring focus-ring-2 focus:gray-500" value={btnText}/>
+					<input type="text" id="shorturl" name="shorturl" className="row-span-1 col-span-8 bg-white px-4 py-2 border-t border-b border-l text-gray-700 focus:outline-none w-auto rounded" placeholder="{short url}" onChange={handleShortUrl} required />
 					{surl ? <p className="mr-auto row-span-1 col-span-full text-sm font-bold">{"The Short URL is "}<a className="text-blue-600 underline cursor-pointer" href={`${surl}${shortUrl}`}>{`${surl}${shortUrl}`}</a></p> : null}
 				</div>
 			</form>

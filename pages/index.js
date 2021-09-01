@@ -21,7 +21,7 @@ export default function Home() {
 						<div className="flex min-h-screen align-center items-center">
 							<ShortenUrlForm placeHolder="That Long Url..." btnText="Shorten Url" />
 						</div>
-						<About />
+						{/* <About /> */}
 					</main>}
 			</div>
 		</>
